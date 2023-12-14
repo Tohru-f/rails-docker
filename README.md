@@ -1,24 +1,15 @@
 # README
+Railsのタスク管理アプリを立ち上げる方法
+対象としたスペック： MAC M2チップ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. git clone https://github.com/Tohru-f/rails-docker.git でローカルリポジトリに本アプリのリポジトリの内容をコピーしてくる。
 
-Things you may want to cover:
+2. docker-compose build でイメージファイルを作成する
 
-* Ruby version
+3. docker-compose up で作成したイメージでコンテナを立ち上げる
 
-* System dependencies
+4. docker-compose run web rake db:createでデータベースを生成
 
-* Configuration
+5. docker-compose run web rails db:migrateで生成したデータベースをマイグレーションする
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. ブラウザを起動してURL欄にlocalhost:3000を入力してタスク管理アプリを表示させる
